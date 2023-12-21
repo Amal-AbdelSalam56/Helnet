@@ -1,0 +1,61 @@
+.reelsComponents {
+  display: grid;
+  background-color: #ffffff;
+  border-radius: 1.125rem;
+  padding: 1.12rem;
+  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.01);
+  height: fit-content;
+  gap: 0.3rem;
+  grid-template-columns: repeat(4, 1fr);
+  
+  @media (max-width: 1440px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 991px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.box__reel__components {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  &__title {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    @media (max-width: 776px) {
+      width: 100%;
+    }
+    &__info {
+      @media (max-width: 400px) {
+        flex-wrap: wrap;
+      }
+      display: flex;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+    .pic2 {
+      width: 30px !important;
+      height: 10px !important;
+    }
+    h4 {
+      min-width: fit-content;
+    }
+  }
+}

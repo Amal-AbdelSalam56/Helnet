@@ -1,0 +1,28 @@
+.main {
+  max-width: 2000px;
+  margin-inline: auto;
+  margin-block-start: 5.5rem;
+  min-height: 100%;
+  display: grid;
+  display: flex;
+  justify-items: center;
+  gap: 1rem;
+  padding-inline: 2rem;
+
+  @media screen and (max-width: 991px) {
+    & {
+      padding: 0px !important;
+    }
+  }
+
+  & > .container {
+    grid-row: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    &.start {
+      justify-content: space-between !important;
+    }
+  }
+}

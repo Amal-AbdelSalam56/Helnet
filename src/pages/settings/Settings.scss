@@ -1,0 +1,18 @@
+.settings {
+  width: 70%;
+  margin-left: 10%;
+  margin-right: 10%;
+  @media screen and (max-width: 1110px) {
+    & {
+      width: 80% !important;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    & {
+      width: 100% !important;
+
+      margin-left: 0px !important;
+      margin-right: 0px !important;
+    }
+  }
+}

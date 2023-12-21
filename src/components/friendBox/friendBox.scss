@@ -1,0 +1,51 @@
+.friend__box {
+  background: #f7f9fa;
+  padding: 10px;
+
+  border-radius: 10px;
+  &__images {
+    position: relative;
+    margin-bottom: 20px;
+    &__img {
+      min-height: 80px;
+      max-height: 160px;
+      width: 100%;
+    }
+    &__avatar {
+      position: absolute;
+      width: 40px;
+      right: 15px;
+      bottom: -15px !important;
+
+      @media (max-width: 450px) {
+        // right: 25%;
+        bottom: -15px !important;
+      }
+    }
+  }
+
+  &__content {
+    margin-top: 25px;
+    margin-bottom: 20px;
+    h3 {
+      font-family: Times New Roman;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 17px;
+      letter-spacing: 0em;
+      margin-bottom: 10px;
+    }
+    p {
+      font-family: Times New Roman;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 16px;
+      letter-spacing: 0em;
+    }
+  }
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,204 @@
+.navbar {
+  display: flex;
+  // flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 3.5rem;
+  padding-block: 1rem;
+  background-color: var(--bg-color);
+  position: sticky;
+  top: 0rem;
+  z-index: 99;
+  box-shadow: 0px 1px 7px 0px #3d5b5945;
+
+  @media screen and (max-width: 600px) {
+    padding-inline: 1rem;
+
+    &__logo {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 230px) {
+    justify-content: flex-end;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    direction: ltr !important;
+
+    &.navigation {
+      gap: 5rem;
+
+      @media screen and (max-width: 1100px) {
+        display: none;
+      }
+    }
+
+    &.userOptions {
+      gap: 2rem;
+
+      @media screen and (max-width: 600px) {
+        gap: 1rem;
+
+        & > li:last-child {
+          display: none;
+        }
+      }
+      @media screen and (max-width: 230px) {
+        display: none;
+      }
+
+      & > li {
+        background-color: #f6f6f6;
+        border-radius: 50%;
+        width: 2.5rem;
+        height: 2.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &.tapButton {
+          display: none;
+
+          @media screen and (min-width: 601px) and (max-width: 1100px) {
+            display: flex;
+          }
+        }
+
+        &.globe {
+          position: relative;
+
+          & > .notifications {
+            position: absolute;
+            right: 0;
+            top: 0;
+            transform: translate(0.5rem, -0.25rem);
+
+            background-color: #a74ed1;
+            width: 1.125rem;
+            height: 1.125rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+
+            color: #fff;
+            text-align: center;
+            font-family: Roboto;
+            font-size: 0.6875rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+        }
+      }
+    }
+
+    &.mobileButton {
+      display: none;
+      gap: 1rem;
+
+      @media screen and (max-width: 600px) {
+        display: flex;
+      }
+    }
+
+    &.mobileMenu {
+      left: auto !important;
+      right: -400px !important;
+      &.true {
+        right: 0px !important;
+        left: auto !important;
+      }
+
+      @media (min-width: 1050px) {
+        & {
+          display: none !important;
+        }
+      }
+
+      @media screen and (max-width: 1050px) {
+        background-color: var(--bg-color);
+        width: 27vw;
+        height: 100dvh;
+        padding: 2rem;
+        position: absolute;
+        z-index: 100;
+        top: 0;
+        left: 0;
+
+        &.ltr {
+          left: auto;
+          right: 0;
+        }
+
+        &.true {
+          display: grid;
+          position: fixed;
+        }
+        & > li,
+        & > a {
+          display: flex;
+          // grid-template-columns: auto 1fr;
+          flex-direction: row-reverse;
+          align-items: center;
+          // justify-content: flex-end;
+          gap: 1rem;
+        }
+      }
+
+      @media screen and (max-width: 950px) {
+        width: 30vw;
+      }
+
+      @media screen and (max-width: 750px) {
+        width: 40vw;
+      }
+
+      @media screen and (max-width: 600px) {
+        width: 45vw;
+      }
+
+      @media screen and (max-width: 450px) {
+        width: 50vw;
+      }
+
+      @media screen and (max-width: 400px) {
+        width: 70vw;
+      }
+
+      @media screen and (max-width: 300px) {
+        width: 80vw;
+      }
+
+      @media screen and (max-width: 250px) {
+        width: 100vw;
+      }
+    }
+  }
+}
+
+.en {
+  .navbar__list {
+    direction: rtl !important;
+  }
+
+  .mobileMenu {
+    left: -400px !important;
+    right: auto !important;
+
+    &.true {
+      right: auto !important;
+
+      left: 0px !important;
+    }
+
+    @media (min-width: 1100px) {
+      & {
+        display: none !important;
+      }
+    }
+  }
+}

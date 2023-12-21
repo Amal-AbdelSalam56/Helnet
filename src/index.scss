@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
+@font-face {
+  font-family: "Times New Roman";
+  src: local("Times New Roman"), url("./times-new-roman.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  font-family: "Times New Roman";
+
+  // i well set the vars
+  --color: #a74ed1;
+  --bg-color: #fff;
+  --main-bg: #f6f6f6;
+  
+}
+
+html,
+body {
+  height: 100%;
+  // background-color: var(--main-bg);
+
+  .rtl {
+    direction: rtl;
+  }
+}
+
+.devOnly {
+  // display: none;
+  direction: rtl;
+}
+
+body.en {
+  direction: ltr;
+}

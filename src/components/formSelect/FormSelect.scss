@@ -1,0 +1,16 @@
+.inputSelect {
+  margin-bottom: 30px;
+  width: 100%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 1rem;
+  display: block;
+
+  &__All {
+    gap: 5px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}

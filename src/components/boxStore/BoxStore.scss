@@ -1,0 +1,20 @@
+.box__store {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  &__card {
+    box-shadow: 0px 0px 1px 0px #0000001f;
+
+    box-shadow: 0px 0px 2px 0px #00000024;
+
+    box-shadow: 0px 4px 4px 0px #00000026;
+    width: 190px;
+    height: 76px;
+    min-width: fit-content;
+
+    border-radius: 16px;
+    align-items: center;
+    background-color: #fff;
+    cursor: pointer;
+  }
+}
